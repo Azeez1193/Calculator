@@ -1,0 +1,54 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<div>
+    <input style="width: 100px; height: 100px;" id="display"/>
+    <button onclick="displaynumber(9)">9</button>
+    <button onclick="displaynumber(8)">8</button>
+    <button onclick="displaynumber(7)">7</button>
+    <button onclick="displaynumber(6)">6</button>
+    <button onclick="displaynumber(5)">5</button>
+    <button onclick="displaynumber(4)">4</button>
+    <button onclick="displaynumber(3)">3</button>
+    <button onclick="displaynumber(2)">2</button>
+    <button onclick="displaynumber(1)">1</button>
+    <button onclick="displaynumber(0)">0</button>
+    <button onclick="displaynumber('+')">+</button>
+    <button onclick="displaynumber('-')">-</button>
+    <button onclick="calculate()">=</button>
+    <button onclick="deleteNumber()">Del</button>
+
+
+</div>
+
+<script>
+function displaynumber(number) {
+    document.getElementById('display').value += number;
+
+}
+ function calculate() {
+    const calculation = document.getElementById
+    ('display').value
+
+
+    const result = eval(calculation);
+    document.getElementById('display').value = result
+ }
+
+
+function deleteNumber() {
+    let input = document.getElementById('display').value;
+
+
+    let newNumber = input.slice(0, -1)
+    document.getElementById('display').value = newNumber
+}
+
+</script>
+
+</body>
+</html>
